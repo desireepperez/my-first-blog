@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w1*a=uuuk71g$*fvgo4-o!eq%_z6ae3m1)b55(sebgpgkt72z^'
+SECRET_KEY = 'django-insecure-^+ua2ht^xkmfct1$p02d!ch(iv05%b&n5zd0h2$(h4nz&+5t@d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pythonanywhere.com',]
 
 
 # Application definition
@@ -123,14 +123,3 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-TIME_ZONE = 'MST'
-STATIC_ROOT = BASE_DIR / 'static'
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','.pythonanywhere.com']
-
-from django.apps import AppConfig
-
-class BlogConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'blog'
