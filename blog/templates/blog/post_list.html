@@ -8,16 +8,12 @@
 			<h1><a href="/">Desiree's Blog</a></h1>
 		</header>
 
-		<article>
-			<time>published: 07 Feb. 2025, 3:46PM</time>
-			<h2><a href="">My First Post</a></h2>
-			<p>All Cats Are Beautiful</p>
-		</article>
-
-		<article>
-			<time>published:07 Feb. 2025, 3:48PM</time>
-			<h2><a href="">My Second Post</a></h2>
-			<p>All Cops Are Bastards</p>
-		</article>
+		{% for post in posts %}
+			<article>
+				<time>published: {{ post.published_date }}</time>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</article>
+		{% endfor %}
 	</body>
 </html>
